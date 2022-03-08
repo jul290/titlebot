@@ -1,14 +1,15 @@
-import Button from "@mui/material/Button";
 import TitleBotForm from "./components/TitleBotForm";
+import CurrentTitle from "./components/CurrentTitle";
 import TitleHistory from "./components/TitleHistory";
 
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>TitleBot</h1>
+    <div id="App">
+      <h1>Grab Title and Favicon from Any Webpage </h1>
       <TitleBotForm />
+      <CurrentTitle />
       <TitleHistory />
     </div>
   );

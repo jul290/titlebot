@@ -1,18 +1,23 @@
-import { TextField, Button } from "@material-ui/core";
+import { TextField, Grid, Button } from "@material-ui/core";
 import "../styles/TitleBotForm.css";
 const TitleBotForm = () => {
   return (
-    <form>
-      <div class="TextField">
-        <TextField
-          id="outlined-basic"
-          label="Website URL"
-          variant="outlined"
-          fullWidth
-        />
-      </div>
-
-      <Button variant="contained">Grab</Button>
+    <form class="TitleBotForm">
+      <Grid container>
+        <Grid item xs={10}>
+          <TextField
+            id="outlined-basic"
+            label="Website URL"
+            variant="outlined"
+            fullWidth
+          />
+        </Grid>
+        <Grid item xs={2}>
+          <Button id="GrabButton" variant="contained">
+            Grab
+          </Button>
+        </Grid>
+      </Grid>
     </form>
   );
 };
