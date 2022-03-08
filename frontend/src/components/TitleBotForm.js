@@ -1,36 +1,55 @@
 import { useState } from "react";
 import { TextField, Grid, Button } from "@material-ui/core";
 import "../styles/TitleBotForm.css";
+const axios = require("axios");
 
 const TitleBotForm = () => {
-  const [websiteURL, setWebsiteURL] = useState("Website URL");
-  const [websiteTitle, setWebsiteTitle] = useState("Website Title");
+  //   const [grabbedDate, setGrabbedDate] = useState("Date");
+  const [websiteURL, setWebsiteURL] = useState("");
+  const [submittedWebsiteURL, setSubmittedWebsiteURL] = useState("");
+  const [websiteTitle, setWebsiteTitle] = useState("");
+  const [websiteFavicon, setWebsiteFavicon] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(websiteURL);
+    axios
+      .post("http://localhost:5001/title", { website: websiteURL })
+      .then((response) => {
+        setSubmittedWebsiteURL(websiteURL);
+        setWebsiteTitle(response.data["title"]);
+        setWebsiteFavicon(response.data["favicon"]);
+      });
+  };
+  const handleText = (e) => {
+    setWebsiteURL(e.target.value);
+  };
 
-  const [websiteFavicon, setWebsiteFavicon] = useState("Website Favicon");
   return (
-    <form class="TitleBotForm">
+    <form class="TitleBotForm" onSubmit={handleSubmit}>
       <Grid container>
         <Grid item xs={10}>
           <TextField
             id="outlined-basic"
             label="Website URL"
+            value={websiteURL}
+            onChange={handleText}
             variant="outlined"
             fullWidth
           />
         </Grid>
         <Grid item xs={2}>
-          <Button id="GrabButton" variant="contained">
+          <Button id="GrabButton" variant="contained" type="submit">
             Grab
           </Button>
         </Grid>
         <Grid item xs={4}>
-          {websiteURL}
+          {submittedWebsiteURL}
         </Grid>
         <Grid item xs={4}>
           {websiteTitle}
         </Grid>
         <Grid item xs={4}>
-          {websiteFavicon}
+          <img src={websiteFavicon} height="20px"></img>
         </Grid>
       </Grid>
     </form>

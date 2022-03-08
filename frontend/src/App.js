@@ -1,6 +1,5 @@
 import TitleBotForm from "./components/TitleBotForm";
-import TitleHistory from "./components/TitleHistory";
-
+import TitleBotHistory from "./components/TitleHistory";
 import "./App.css";
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
     <div id="App">
       <h1>Grab Title and Favicon from Any Webpage </h1>
       <TitleBotForm />
-      <TitleHistory />
+      <TitleBotHistory />
     </div>
   );
 }
