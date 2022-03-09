@@ -1,0 +1,22 @@
+{
+  "name": "titlebot",
+  "version": "1.0.0",
+  "description": "Grabs title and favicon of any website",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd frontend ; npm start\" \"cd backend ; npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jul290/titlebot.git"
+  },
+  "author": "Justin Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jul290/titlebot/issues"
+  },
+  "homepage": "https://github.com/jul290/titlebot#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

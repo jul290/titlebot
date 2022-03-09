@@ -2,3 +2,20 @@
   max-width: 30px;
   min-height: 55px;
 }
+
+#TitleBotForm {
+  font-size: 25px;
+}
+
+#CurrentResult {
+  margin-top: 20px;
+}
+
+#FormResult {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#WebsiteTitle {
+  margin-top: 0px;
+}
