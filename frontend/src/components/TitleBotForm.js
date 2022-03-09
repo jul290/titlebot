@@ -25,7 +25,7 @@ const TitleBotForm = () => {
   };
 
   return (
-    <form class="TitleBotForm" onSubmit={handleSubmit}>
+    <form id="TitleBotForm" onSubmit={handleSubmit}>
       <Grid container>
         <Grid item xs={10}>
           <TextField
@@ -42,14 +42,11 @@ const TitleBotForm = () => {
             Grab
           </Button>
         </Grid>
-        <Grid item xs={4}>
-          {submittedWebsiteURL}
-        </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           {websiteTitle}
         </Grid>
-        <Grid item xs={4}>
-          <img src={websiteFavicon} height="20px"></img>
+        <Grid item xs={6}>
+          <img src={websiteFavicon} height="30px"></img>
         </Grid>
       </Grid>
     </form>
