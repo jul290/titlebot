@@ -32,4 +32,8 @@ simple, it did not take me too long to develop a user friendly website.
 
 ## Installation Process
 
-U
+- clone the code
+- install node and npm from https://nodejs.org/en/download/
+- cd into frontend folder and run npm install
+- cd into root folder and run npm install
+- From the root folder run npm start
