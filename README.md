@@ -50,7 +50,7 @@ npm install
 
 ## How to Run
 
-- From the root dorectpru
+- From the root directory
 
 ```
 run npm start
