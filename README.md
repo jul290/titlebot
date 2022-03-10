@@ -42,7 +42,7 @@ simple, it did not take me too long to develop a user friendly website.
 run npm install
 ```
 
-- cd into root folder and run
+- cd into root directory and run
 
 ```
 npm install
@@ -50,7 +50,7 @@ npm install
 
 ## How to Run
 
-- From the root folder
+- From the root dorectpru
 
 ```
 run npm start
