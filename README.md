@@ -50,8 +50,8 @@ npm install
 
 ## How to Run
 
-- From the root directory
+- From the root directory, run
 
 ```
-run npm start
+npm start
 ```
